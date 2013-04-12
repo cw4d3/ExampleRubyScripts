@@ -7,7 +7,7 @@ require 'open-uri'
 
 i = 0
 while i < 100 
-  doc = Nokogiri::HTML(open('http://summitortho-new.nerderylabs.com'))
+  doc = Nokogiri::HTML(open('http://thesitewetalkedabout.com'))
   doc.search('div#mainsub.dr span.bigsub h1 a').each do |tag|
     
     # Make sure Dr. Gannon is not present in rotation

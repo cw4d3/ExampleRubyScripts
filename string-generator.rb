@@ -1,15 +1,9 @@
 #!/usr/bin/env ruby
 # This program will generate a string that is the length specified as a command line argument.
 
-
 if ARGV[0] =~ /^[0-9]+/
 
-  int = ARGV[0].to_i
-  a = String.new
-  
-  while a.length < int
-    a.concat "a"
-  end
+  a = "a" * ARGV[0].to_i
   
   puts "Your #{a.length} char long string, prepared specially just for you:\n"
   puts a
@@ -26,10 +20,15 @@ Usage:
     INFO
 end
 
-## Another more simple version:
+## A different, yet less simple version:
 #if ARGV[0] =~ /^[0-9]+/
 #
-#  a = "a" * ARGV[0].to_i
+#  int = ARGV[0].to_i
+#  a = String.new
+#  
+#  while a.length < int
+#    a.concat "a"
+#  end
 #  
 #  puts "Your #{a.length} char long string, prepared specially just for you:\n"
 #  puts a
@@ -45,3 +44,4 @@ end
 #
 #    INFO
 #end
+
